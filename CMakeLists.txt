@@ -24,11 +24,11 @@ macro(targets)
 	add_executable(segfault_demo_server${target_suffix} src/main.cpp)
 	add_executable(segfault_demo_client${target_suffix} src/test.cpp)
 	ament_target_dependencies(segfault_demo_server${target_suffix}
-        	"rclcpp"
+        	"rclcpp${target_suffix}"
 		"std_msgs"
 	)
 	ament_target_dependencies(segfault_demo_client${target_suffix}
-        	"rclcpp"
+        	"rclcpp${target_suffix}"
 		"std_msgs"
 	)
    
